@@ -13,7 +13,7 @@
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+	
     <style>
         /* ===== EXACT PALETTE MATCHED FROM UPLOADED LOGO ===== */
         :root {
@@ -2097,6 +2097,130 @@
             }
         }
 
+    
+        /* ===== MEET OUR TEAM SECTION (1 FOUNDER + 4 MEMBERS, NAME ONLY) ===== */
+        .team-section-wrap {
+            margin-top: 44px;
+            padding-top: 36px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .team-founder-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+
+        .team-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 24px 18px;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--logo-magenta);
+        }
+
+        .team-card.founder-card {
+            width: 100%;
+            max-width: 280px;
+            background: var(--logo-yellow-soft);
+            border: 2px solid var(--border-warm);
+        }
+
+        .team-avatar-ring {
+            width: 128px;
+            height: 128px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--logo-magenta);
+            background: var(--logo-yellow-bg);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .founder-card .team-avatar-ring {
+            width: 148px;
+            height: 148px;
+            border-width: 4px;
+        }
+
+        .team-avatar-ring img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-member-name {
+            font-family: var(--font-display);
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: var(--text-heading);
+        }
+
+        .founder-card .team-member-name {
+            font-size: 1.25rem;
+            color: var(--logo-magenta);
+        }
+
+        
+        .team-member-role {
+            margin-top: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--logo-cyan);
+            line-height: 1.35;
+        }
+
+        .founder-card .team-member-role {
+            color: #713F12;
+            background: var(--logo-yellow-bg);
+            border: 1px solid var(--border-warm);
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.78rem;
+        }
+
+        .team-members-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        @media (max-width: 992px) {
+            .team-members-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-members-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+            .team-card {
+                padding: 18px 12px;
+            }
+            .team-avatar-ring {
+                width: 96px;
+                height: 96px;
+            }
+            .founder-card .team-avatar-ring {
+                width: 118px;
+                height: 118px;
+            }
+            .team-member-name {
+                font-size: 0.98rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -2118,7 +2242,7 @@
                 <i class="fas fa-home"></i> Home &amp; Overview
             </button>
             <button type="button" class="mobile-nav-item" data-tab="tab-owner" onclick="switchTab('tab-owner')">
-                <i class="fas fa-user-check"></i> Owner Story (Rohit)
+                <i class="fas fa-users"></i> Owner &amp; Team
             </button>
             <button type="button" class="mobile-nav-item" data-tab="tab-products" onclick="switchTab('tab-products')">
                 <i class="fas fa-flask"></i> Raw Material Concentrates
@@ -2199,7 +2323,7 @@
                     <i class="fas fa-home"></i> Home & Overview
                 </button>
                 <button class="tab-btn" data-tab="tab-owner" onclick="switchTab('tab-owner')">
-                    <i class="fas fa-user-check"></i> Owner Story (Rohit Sambhawani)
+                    <i class="fas fa-users"></i> Owner &amp; Team
                 </button>
                 <button class="tab-btn" data-tab="tab-products" onclick="switchTab('tab-products')">
                     <i class="fas fa-flask"></i> Raw Material Concentrates
@@ -2327,7 +2451,7 @@
             <div class="owner-hero-panel">
                 <div class="owner-avatar-card">
                     <div class="owner-avatar-frame">
-                        <img src="logo.png" alt="Rohit Sambhawani Khushali Chemicals">
+                        <img src="logo.png" alt="Rohit Sambhawani">
                     </div>
                     <a href="https://instagram.com/rohitsam.0" target="_blank" class="badge-pill badge-magenta" style="font-size: 0.85rem;">
                         <i class="fab fa-instagram"></i> @rohitsam.0
@@ -2372,6 +2496,55 @@
                 <div class="stat-card" style="text-align: left; border-top-color: var(--logo-cyan);">
                     <h3 style="font-size: 1.1rem; margin-bottom: 6px;"><i class="fas fa-check-circle" style="color: var(--logo-cyan);"></i> Complete Startup Support</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">Raw material lene ke baad manufacturing SOPs, TDS check aur batch testing me direct WhatsApp support milta hai.</p>
+                </div>
+            </div>
+
+            <!-- Meet Our Team (1 Founder + 4 Members, Name Only) -->
+            <div class="team-section-wrap">
+                <div class="section-header">
+                    <span class="badge-pill badge-magenta"><i class="fas fa-users"></i> Meet Our Team</span>
+                    <h2>Khushali Chemicals Team</h2>
+                </div>
+
+                <div class="team-founder-row">
+                    <div class="team-card founder-card">
+                        <div class="team-avatar-ring">
+                            <img src="images/1795590979310.png" alt="Rohit Sambhawani">
+                        </div>
+                        <div class="team-member-name">Rohit Sambhawani</div>
+                        <div class="team-member-role">Founder</div>
+                    </div>
+                </div>
+
+                <div class="team-members-grid">
+                    <div class="team-card">
+                        <div class="team-avatar-ring">
+                            <img src="images/1795591000295.png" alt="Karan Manghnani">
+                        </div>
+                        <div class="team-member-name">Karan Manghnani</div>
+                        <div class="team-member-role">Customer and Technical Support</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar-ring">
+                            <img src="images/1795591063998.png" alt="Lokesh Fatehpuriya">
+                        </div>
+                        <div class="team-member-name">Lokesh Fatehpuriya</div>
+                        <div class="team-member-role">Dispatch and Packaging</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar-ring">
+                            <img src="images/1795591022489.png" alt="Govardhan Joshi">
+                        </div>
+                        <div class="team-member-name">Govardhan Joshi</div>
+                        <div class="team-member-role">Business Development Associate</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar-ring">
+                            <img src="images/1795590953886.png" alt="Piyush Pareek">
+                        </div>
+                        <div class="team-member-name">Piyush Pareek</div>
+                        <div class="team-member-role">Sales Manager</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -4143,7 +4316,7 @@
 
         // Form Submission to WhatsApp
         function handleInquiry(e) {
-            e.preventDefault();
+  	          e.preventDefault();
             const name = document.getElementById('cName').value;
             const phone = document.getElementById('cPhone').value;
             const city = document.getElementById('cCity').value;
