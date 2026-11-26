@@ -13,7 +13,7 @@
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	
+
     <style>
         /* ===== EXACT PALETTE MATCHED FROM UPLOADED LOGO ===== */
         :root {
@@ -2221,6 +2221,19 @@
             }
         }
 
+    
+        @media (max-width: 768px) {
+            .header-btns {
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .header-btns .btn {
+                flex: 1 1 auto;
+                font-size: 0.75rem;
+                padding: 7px 9px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -2261,6 +2274,9 @@
             </button>
         </div>
         <div class="mobile-drawer-footer">
+            <a href="https://drive.google.com/file/d/1xYBZYFgWJ6CjDV_Np0b_uGmA2uLeutI_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" id="mobileDownloadCatalogBtn" class="btn btn-yellow">
+                <i class="fas fa-download"></i> Download Catalog
+            </a>
             <a href="tel:8905878950" class="btn btn-outline">
                 <i class="fas fa-phone-alt"></i> Call +91 8905878950
             </a>
@@ -2306,6 +2322,9 @@
                 <div class="header-btns">
                     <a href="tel:8905878950" class="btn btn-outline">
                         <i class="fas fa-phone-alt"></i> 8905878950
+                    </a>
+                    <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer" id="downloadCatalogBtn" class="btn btn-yellow">
+                        <i class="fas fa-download"></i> Download Catalog
                     </a>
                     <a href="https://wa.me/918905878950?text=Hello%20Khushali%20Chemicals,%20I%20want%20to%20order%20products" target="_blank" class="btn btn-magenta">
                         <i class="fab fa-whatsapp"></i> Order on WhatsApp
@@ -2509,7 +2528,7 @@
                 <div class="team-founder-row">
                     <div class="team-card founder-card">
                         <div class="team-avatar-ring">
-                            <img src="images/1795590979310.png" alt="Rohit Sambhawani">
+                            <img src="https://imgh.in/host/i53ibc" alt="Rohit Sambhawani">
                         </div>
                         <div class="team-member-name">Rohit Sambhawani</div>
                         <div class="team-member-role">Founder</div>
@@ -2519,28 +2538,28 @@
                 <div class="team-members-grid">
                     <div class="team-card">
                         <div class="team-avatar-ring">
-                            <img src="images/1795591000295.png" alt="Karan Manghnani">
+                            <img src="https://imgh.in/host/mms2ka" alt="Karan Manghnani">
                         </div>
                         <div class="team-member-name">Karan Manghnani</div>
                         <div class="team-member-role">Customer and Technical Support</div>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar-ring">
-                            <img src="images/1795591063998.png" alt="Lokesh Fatehpuriya">
+                            <img src="https://imgh.in/host/ylzqnk" alt="Lokesh Fatehpuriya">
                         </div>
                         <div class="team-member-name">Lokesh Fatehpuriya</div>
                         <div class="team-member-role">Dispatch and Packaging</div>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar-ring">
-                            <img src="images/1795591022489.png" alt="Govardhan Joshi">
+                            <img src="https://imgh.in/host/4x2u5x" alt="Govardhan Joshi">
                         </div>
                         <div class="team-member-name">Govardhan Joshi</div>
                         <div class="team-member-role">Business Development Associate</div>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar-ring">
-                            <img src="images/1795590953886.png" alt="Piyush Pareek">
+                            <img src="https://imgh.in/host/rs4utz" alt="Piyush Pareek">
                         </div>
                         <div class="team-member-name">Piyush Pareek</div>
                         <div class="team-member-role">Sales Manager</div>
@@ -4316,7 +4335,7 @@
 
         // Form Submission to WhatsApp
         function handleInquiry(e) {
-  	          e.preventDefault();
+            e.preventDefault();
             const name = document.getElementById('cName').value;
             const phone = document.getElementById('cPhone').value;
             const city = document.getElementById('cCity').value;
